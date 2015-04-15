@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zee Weather</title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body>
+	<header class="row">
+		<h1>Today's Weather <span></span></h1>
+	</header>
+	<main class="row">
+		<div id="alert-toggle" data-alert class="alert-box alert">
+			&nbsp;
+		</div>
+		<div class="panel">
+			<ul id="alert-details" class="padded"></ul>
+		</div>
+		<div id="weather-icon" class="large-4 columns"></div>
+		<div id="weather-display" class="large-8 columns"></div>
+		<div id="compare">
+			<h3><strong>It is currently</strong></h3>
+			<div id="yday" class="large-6 columns">
+				<span></span> than yesterday
+			</div>
+			<div id="future" class="large-6 columns">
+				<span></span> than tomorrow's average.
+			</div>
+		</div>
+	</main>
+	<footer class="row">
+		<p>Created by Alexa Martinek &copy; 2015</p>
+	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+  	<script src="js/script.js"></script>
+</body>
+</html>

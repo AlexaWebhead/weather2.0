@@ -1,0 +1,35 @@
+/* weather conditions */
+
+.chanceflurries, .chancerain, .chancesleet, .chancesnow, .chancetstorms {
+	background: silver;
+}
+.clear, .sunny {
+	background: royalblue;
+}
+.cloudy, .tstorms {
+	background: dimgrey;
+}
+.flurries, .snow {
+	background: snow;
+}
+.fog {
+	background: mintcream;
+}
+.hazy {
+	background: beige;
+}
+.mostlycloudy {
+	background: lightgray;
+}
+.mostlysunny {
+	background: lightskyblue;
+}
+.partlycloudy {
+	background: whitesmoke;
+}
+.partlysunny {
+	background: lightyellow;
+}
+.sleet, .rain {
+	background: darkgrey;
+}

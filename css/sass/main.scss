@@ -1,0 +1,68 @@
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// ----------------------------------------
+// Import Foundation
+
+@import "compass/css3";
+
+@import "_type";
+@import "_weather";
+
+/* main styling */
+
+body {
+	font-size: 1em;
+}
+
+header {
+	margin-bottom: 15px;
+}
+
+footer {
+	padding-top: 15px;
+}
+
+main {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: white;
+}
+
+#alert-toggle {
+	display: none;
+}
+
+#weather-icon {
+	text-align: center;
+}
+
+//compare weather
+#compare {
+	clear: both;
+	h3 {
+		padding-top: 25px;
+		text-align: center;
+		border-top: 1px solid #ccc;
+	}
+}
+#yday, #future {
+	padding: 25px 0;
+	text-align: center;
+	&.colder {
+		background: blue;
+		color: white;
+	}
+	&.warmer {
+		background: red;
+		color: yellow;
+	}
+}
+
+/* classes */
+.padded {
+	padding-left: 20px;
+}
+.panel {
+	display: none;
+}
