@@ -25,7 +25,7 @@ $(function() {
                 weather: $w.weather,
                 precip_today: $w.precip_today_in,
                 humidity: $w.relative_humidity,
-                wind: $w.wind_string,
+                wind: $w.wind_mph + 'mph ' + $w.wind_dir,
                 icon: $w.icon,
                 icon_url: $w.icon_url,
                 yday_mon: $y.utcdate.mon,
@@ -56,18 +56,16 @@ $(function() {
             //weather display options
             $('body').addClass(r.icon);
             if (hours < 20 && hours > 6){
-                $("#weather-icon").append('<img src="http://icons.wxug.com/i/c/i/' + r.icon + '.gif" alt="' + r.icon + ' weather icon"/>');
+                $("#weather-icon").append('<img src="http://icons.wxug.com/i/c/i/' + r.icon + '.gif" alt="' + r.weather + ' weather icon" title="' + r.weather + '"/>');
             } else {
-                $("#weather-icon").append('<img src="http://icons.wxug.com/i/c/i/nt_' + r.icon + '.gif" alt="' + r.icon + ' weather icon"/>');
+                $("#weather-icon").append('<img src="http://icons.wxug.com/i/c/i/nt_' + r.icon + '.gif" alt="' + r.weather + ' weather icon" title="' + r.weather + '"/>');
             };
             $('header span').append('near ' + '<a href="' + r.url + '" target="_blank" title="' + r.obs_loc + '">' + r.city_loc + '</a>');
-            $d.append('<p><small>' + r.obs_time + '</small></p>',
-                '<p><strong>Temperature:</strong> ' + r.temp + '&deg;F</p>',
-                '<p><strong>Feels like:</strong> ' + r.feel + '&deg;F</p>',
-                '<p><strong>Weather condition:</strong> ' + r.weather + '</p>',
-                '<p><strong>Precipitation today:</strong> ' + r.precip_today + '"</p>',
-                '<p><strong>Humidity:</strong> ' + r.humidity + '</p>',
-                '<p><strong>Wind:</strong> '+ r.wind + '</p>');
+            $('header h1').append('<br><small>' + r.obs_time + '</small>');
+            $d.append('<div id="temp" class="large-4 small-6 columns"><p>' + r.temp + '&deg;F</p></div>',
+                '<div id="precip" class="large-4 small-6 columns"><p>' + r.precip_today + '"</p></div>',
+                '<div id="humidity" class="large-4 small-6 columns"><p>' + r.humidity + '</p></div>',
+                '<div id="wind" class="large-4 small-6 columns"><p>'+ r.wind + '</p></div>');
             //weather history + current compare
             //$('#history').append('<p>' + r.yday_mon + '/' + r.yday_day + ': ' + r.yday_temp + 'F</p>');
             if (r.temp < r.yday_temp){

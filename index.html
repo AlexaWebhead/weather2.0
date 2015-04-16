@@ -5,12 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Zee Weather</title>
 	<link rel="stylesheet" href="css/main.css">
-
 	<script src="js/modernizr.js"></script>
-
 </head>
 <body>
 	<header class="row">
@@ -23,8 +20,11 @@
 		<div class="panel">
 			<ul id="alert-details" class="padded"></ul>
 		</div>
-		<div id="weather-icon" class="large-4 columns"></div>
-		<div id="weather-display" class="large-8 columns"></div>
+		<div id="weather-display">
+			<div id="weather-icon" class="large-4 small-6 columns">
+				<span></span>
+			</div>
+		</div>
 		<div id="compare">
 			<h3><strong>It is currently</strong></h3>
 			<div id="yday" class="large-6 columns">
@@ -38,8 +38,8 @@
 	<footer class="row">
 		<p>Created by Alexa Martinek &copy; 2015</p>
 	</footer>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   	<script src="js/script.js"></script>
 </body>
 </html>

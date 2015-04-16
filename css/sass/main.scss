@@ -10,6 +10,9 @@
 @import "_weather";
 
 /* main styling */
+* {
+	@include box-sizing(border-box);
+}
 
 body {
 	font-size: 1em;
@@ -35,6 +38,26 @@ main {
 
 #weather-icon {
 	text-align: center;
+	background: lightgray;
+	@include box-shadow(inset 0 0 1px 1px rgba(#ffffff, .4));
+	span {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+#weather-display {
+	text-align: center;
+	> div {
+		height: 150px;
+		background: lightgray;
+		@include box-shadow(inset 0 0 1px 1px rgba(#ffffff, .4));
+		img, p {
+			line-height: 150px;
+			vertical-align: middle;
+		}
+	}
 }
 
 //compare weather
